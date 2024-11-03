@@ -16,7 +16,7 @@ const messages = {
       "Login failed due to unexpected error. Please try again later.",
     INVALID_USER_CREDENTIALS: "Invalid Email or Password",
     USER_NOT_FOUND:
-      "No account found with the provided email. Please check you email or create a new accout.",
+      "No account found with the provided email. Please check you email or create a new account.",
     RECIPIENT_ID_MISSING:
       "User ID of the recipient is required to create a chat.",
     MISSING_AUTH_HEADER:
