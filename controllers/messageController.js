@@ -1,3 +1,4 @@
+const messages = require("../constants/messages");
 const createMessage = require("../services/createMessage");
 const fetchAllMessages = require("../services/fetchAllMessages");
 
@@ -5,7 +6,12 @@ const sendMessage = async (request, response) => {
   const { content, chatId } = request.body;
   if (!content || !chatId) {
     console.log("Invalid data passed into request");
-    return response.send(400);
+    return response
+      .status(400)
+      .json({
+        error: messages.ERRORS.BAD_REQUEST,
+        message: messages.ERROR_MESSAGES.INVALID_REQUEST_DATA,
+      });
   }
   var newMessage = {
     sender: request.user._id,

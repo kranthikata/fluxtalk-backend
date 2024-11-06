@@ -43,6 +43,7 @@ const messages = {
       "An internal server error occured while adding the user to the group. Please try again later.",
     SERVER_ERROR_REMOVING_USER:
       "An internal server error occured while removing the user from the group. Please try again later.",
+    INVALID_REQUEST_DATA: "Invalid request data",
   },
   SUCCESS: {
     USER_CREATED: "User created successfully!",
