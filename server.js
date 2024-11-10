@@ -37,9 +37,8 @@ io.on("connection", (socket) => {
     io.to(msg.room).emit("chat message", msg);
   });
 
-  socket.on("new contact added", (userId, contactId) => {
-    io.to(contactId).emit("contact added", userId);
-    console.log(`New contact added for user ${userId}: ${contactId}`);
+  socket.on("add-contact", ({ addedUserId, userId }) => {
+    io.to(addedUserId).emit("new-contact", { userId });
   });
 
   socket.on("disconnect", () => {
